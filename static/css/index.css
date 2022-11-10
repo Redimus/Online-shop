@@ -26,23 +26,14 @@
     color: white;
 }
 
-/* Icon account */
-.account {
+.topnav-rigt {
     float: right;
-    width: 10;
-    color: #ff0000;
 }
 
-/* Search */
-.topnav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+.label {
+    border-radius: 50px;
 }
 
-.topnav .search-container {
-  float: right;
-}
+
+
+
