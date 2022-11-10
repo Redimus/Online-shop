@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bushaev | изделия из кожи</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+<div class="topnav">
+  <a class="active" href="#home">Главная</a>
+  <a href="#blog">Магазин</a>
+  <a href="#delivery">Доставка</a>
+  <a href="#blog">Блог</a>
+  <a href="#about">О нас</a>
+  <a href="#contact">Контакты</a>
+  <a href="#account"><img src="{% static 'icons/icon account.png' %}" width="37" class="account"></a>
+  <a href="#buy"><img src="{% static 'icons/icon buy.png' %}" width="37"></a>
+</div>
+<div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="search"></i></button>
+    </form>
+</div>
+    <h1>Главная страница проекта</h1>
+    <p>Тут будет ссылки на магазин и статьи блога</p>
+  </body>
+</html>
