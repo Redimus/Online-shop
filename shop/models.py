@@ -6,6 +6,7 @@ class Category(models.Model):
     name = models.CharField('Название', max_length=50)
     description = models.TextField('Описание', null=True)
     slug = models.SlugField(max_length=160, null=True)
+    photo = models.ImageField('Фото', upload_to='category_photos/', null=True)
 
     class Meta:
         ordering = ('name',)

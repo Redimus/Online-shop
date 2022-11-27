@@ -9,12 +9,29 @@ Bushaev | изделия из кожи
         width: 70%;
         margin-left: auto;
         margin-right: auto;
+        padding-bottom: 30px;
+        padding-top: 15px;
     }
     .carousel-item img {
         width: auto;
         height: auto;
         border-radius: 20px;
         margin: 0 auto;
+    }
+    .category img {
+        border-radius: 20px;
+        position: relative;
+    }
+    .catalog a {
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Harlow Solid Italic',serif;
+    }
+    .catalog a:hover {
+        color:#800000;
+        text-decoration:none;
+        cursor:pointer;
     }
 
 {% endblock %}
@@ -63,5 +80,16 @@ Bushaev | изделия из кожи
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+{% for category in r_cat %}
+    <div style="display: inline-block; align-items: center; text-align: center; margin: 15px 5px 5px 5px;">
+        <a href="{{ category.slug }}" class="category"><img src="{{ category.photo.url }}" alt="x" width="350px"></a>
+        <div class="title">
+            {{ category.name }}
+        </div>
+    </div>
+{% endfor %}
+    <div class="catalog">
+        <a href="{% url 'shop' %}"><h2>Посмотреть весь каталог товаров</h2>></a>
     </div>
 {% endblock %}

@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('shop.urls')),
     path('blog/', include('blog.urls')),
 ]
+
+

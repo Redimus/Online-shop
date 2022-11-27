@@ -5,9 +5,20 @@ Bushaev | каталог
 {% endblock %}
 
 {% block stile %}
-
+.category img {
+    border-radius: 20px;
+    }
 {% endblock %}
 
 {% block content %}
-<h1>Главная страница магазина</h1>
+<h1 style="text-align: center"><span style="font-family: 'Harlow Solid Italic',serif; ">Каталог товаров</span></h1>
+
+{% for category in category %}
+    <div style="display: inline-block; text-align: center; margin: 15px 5px 5px 5px;">
+        <a href="{{ category.slug }}" class="category"><img src="{{ category.photo.url }}" alt="x" width="350px"></a>
+        <div class="title">
+            {{ category.name }}
+        </div>
+    </div>
+{% endfor %}
 {% endblock %}
