@@ -9,10 +9,8 @@ urlpatterns = [
     path('delivery/', delivery, name='delivery'),
     path('about_us/', about_us, name='about_us'),
     path('contacts/', contacts, name='contacts'),
-    path('shop/belts/', belts, name='belts'),
-    path('shop/wallets/', wallets, name='wallets'),
-    path('shop/docholders/', docholders, name='docholders'),
-    path('shop/bifold/', belts, name='bifold'),
+    path('shop/<slug:slug>', CategoryDetail.as_view(), name='Category'),
+    path('shop/<int:pk>', ProductDetail.as_view(), name='Product'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

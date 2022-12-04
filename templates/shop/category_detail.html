@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Bushaev | {{ category.name }}
+{% endblock %}
+
+{% block stile %}
+
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center">Страница с товарами {{ category.name }}</h1>
+    <h2 style="text-align: center">{{ category.description }}</h2>
+    <img src="{{ category.photo.url }}" width="300px" alt="x">
+
+
+    {% for product in products %}
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Bushaev | {{ product.title }}
+{% endblock %}
+
+{% block stile %}
+
+{% endblock %}
+
+{% block content %}
+<h1>Страница с товарами {{ product.title }}</h1>
+    <h2>{{ product.description }}</h2>
+    <img src="{{ product.photo_overview.url }}" width="300px" alt="x">
+
+{% endblock %}

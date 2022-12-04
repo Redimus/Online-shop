@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
+
 from shop.models import *
 
 
@@ -25,17 +27,9 @@ def about_us(request):
     return render(request, 'about_us.html')
 
 
-def belts(request):
-    return render(request, 'shop/belts.html')
+class CategoryDetail(generic.DetailView):
+    model = Category
 
 
-def docholders(request):
-    return render(request, 'shop/docholders.html')
-
-
-def wallets(request):
-    return render(request, 'shop/wallets.html')
-
-
-def bifold(request):
-    return render(request, 'shop/bifold.html')
+class ProductDetail(generic.DetailView):
+    model = Product
